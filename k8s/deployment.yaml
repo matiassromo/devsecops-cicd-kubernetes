@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: calculator
-          image: ghcr.io/matiassromo/devsecops-calculator:latest
+          image: ghcr.io/matiassromo/devsecops-calculator:a32f2c0
           ports:
             - containerPort: 3000
