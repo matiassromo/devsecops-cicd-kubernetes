@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧮 Calculadora Web - DevSecOps + CI/CD + Kubernetes
 
 Aplicación web moderna de calculadora construida con **Node.js**, **HTML5**, **CSS3** y **JavaScript vanilla**. Completamente funcional, containerizada y lista para Kubernetes.
@@ -392,3 +393,25 @@ Proyecto DevSecOps + CI/CD + Kubernetes - UDLA Semestre 9
 **Versión**: 1.0.0  
 **Última actualización**: 2026  
 **Estado**: ✅ Producción
+=======
+# devsecops-cicd-kubernetes
+
+Proyecto demo para Integración CI/CD y DevSecOps.
+
+## Objetivo
+Implementar un pipeline CI/CD con enfoque DevSecOps que:
+- ejecute pruebas,
+- construya y publique un artefacto (imagen Docker),
+- aplique análisis de seguridad (Trivy),
+- despliegue en Kubernetes (kind) y valide el despliegue.
+
+## Pipeline (GitHub Actions)
+Etapas:
+1. Test (Node)
+2. Build & Push (Docker → GHCR)
+3. Security Scan (Trivy)
+4. Deploy (Kubernetes kind + kubectl apply)
+
+## Evidencias
+Las evidencias del pipeline y del análisis de seguridad se encuentran en la pestaña Actions del repositorio.
+>>>>>>> f86a237715c050950582e7ab2779b1ca8e150807
