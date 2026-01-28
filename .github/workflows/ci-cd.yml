@@ -2,7 +2,7 @@ name: CI/CD Pipeline DevSecOps
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 env:
   DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/devsecops-calculator
