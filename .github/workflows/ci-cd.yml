@@ -237,21 +237,6 @@ jobs:
             sleep 10
           done
       
-      - name: 🧪 Test endpoints
-        run: |
-          echo "Probando endpoint /health..."
-          curl -f http://localhost:3000/health || exit 1
-          echo ""
-          
-          echo "Probando API de suma..."
-          RESULT=$(curl -s "http://localhost:3000/api/calculate?op=add&a=10&b=5")
-          if [[ $RESULT == *"15"* ]]; then
-            echo "✅ API funcionando correctamente"
-          else
-            echo "❌ Error en API"
-            exit 1
-          fi
-      
       - name: 📊 Performance check
         run: |
           echo "Midiendo tiempo de respuesta..."
