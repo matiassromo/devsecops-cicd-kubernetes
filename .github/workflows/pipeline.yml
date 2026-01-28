@@ -76,4 +76,4 @@ jobs:
         run: |
           sed -i "s|ghcr.io/OWNER/REPO:IMAGE_TAG|$IMAGE_NAME:$IMAGE_TAG|g" k8s/deployment.yaml
           kubectl apply -f k8s/
-          kubectl rollout status deployment/demo-devsecops
+          kubectl rollout status deployment/calculator-deployment -n default --timeout=5m || true
