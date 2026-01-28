@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora - DevSecOps + CI/CD + Kubernetes</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧮 Calculadora Web</h1>
+      <p class="subtitle">DevSecOps + CI/CD + Kubernetes</p>
+      <div id="health-status" class="health-status">
+        <span class="status-dot loading"></span>
+        <span class="status-text">Verificando servidor...</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="calculator-section">
+        <h2>Operaciones Básicas</h2>
+        
+        <div class="input-group">
+          <label for="num1">Número 1:</label>
+          <input type="number" id="num1" placeholder="Ej: 10" value="10">
+        </div>
+
+        <div class="input-group">
+          <label for="num2">Número 2:</label>
+          <input type="number" id="num2" placeholder="Ej: 5" value="5">
+        </div>
+
+        <div class="operations">
+          <button class="btn btn-add" onclick="calculate('add')">+ Sumar</button>
+          <button class="btn btn-subtract" onclick="calculate('subtract')">- Restar</button>
+          <button class="btn btn-multiply" onclick="calculate('multiply')">× Multiplicar</button>
+          <button class="btn btn-divide" onclick="calculate('divide')">÷ Dividir</button>
+        </div>
+
+        <div id="result-box" class="result-box hidden">
+          <h3>Resultado</h3>
+          <div id="result-content" class="result-content">
+            <p id="result-text"></p>
+            <p id="result-details" class="result-details"></p>
+          </div>
+        </div>
+
+        <div id="error-box" class="error-box hidden">
+          <h3>Error</h3>
+          <p id="error-text"></p>
+        </div>
+      </div>
+
+      <div class="history-section">
+        <h2>Historial de Operaciones</h2>
+        <div id="history" class="history-list">
+          <p class="empty-message">Sin operaciones aún</p>
+        </div>
+        <button class="btn btn-secondary" onclick="clearHistory()">Limpiar Historial</button>
+      </div>
+
+      <div class="info-section">
+        <h2>Información del Sistema</h2>
+        <div class="info-box">
+          <p><strong>Estado:</strong> <span id="server-status">Cargando...</span></p>
+          <p><strong>Endpoint API:</strong> <code>/api/calculate</code></p>
+          <p><strong>Health Check:</strong> <code>/health</code></p>
+          <p><strong>Tecnología:</strong> Node.js + Express</p>
+          <p><strong>Containerizado:</strong> Docker ✓</p>
+          <p><strong>Orquestación:</strong> Kubernetes ✓</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 DevSecOps Project | CI/CD Pipeline | Kubernetes Deployment</p>
+    </footer>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
