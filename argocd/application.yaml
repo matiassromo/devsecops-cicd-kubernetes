@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/matiassromo/devsecops-cicd-k8s.git
+    repoURL: https://github.com/matiassromo/devsecops-cicd-kubernetes.git
     targetRevision: main
     path: k8s
 
